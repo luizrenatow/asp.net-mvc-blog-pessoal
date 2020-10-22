@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BlogPessoal.Web.Models.Artigos.Artigo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Autor.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoriaDeArtigo.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Conteudo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataPublicacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Removido)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Autor.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoriaDeArtigo.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Titulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Conteudo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataPublicacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Removido)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

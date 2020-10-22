@@ -29,6 +29,7 @@ namespace BlogPessoal.Web.Models.Autores
 
         [Required]
         [Display(Name = "Data de Cadastro")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DataDeCadastro { get; set; }
 
         public virtual ICollection<Artigo> Artigos { get; set; }

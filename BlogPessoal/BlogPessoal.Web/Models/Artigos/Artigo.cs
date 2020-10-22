@@ -21,6 +21,7 @@ namespace BlogPessoal.Web.Models.Artigos
 
         [Required]
         [Display(Name = "Data de Publicação")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DataPublicacao { get; set; }
 
         [Required]
