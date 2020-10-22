@@ -6,8 +6,10 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    @*<link href="~/Content/bootstrap-lumen.css" rel="stylesheet" type="text/css" />*@
     <script src="~/Scripts/modernizr-2.8.3.js"></script>
-</head>
+    @RenderSection("StyleContent", required: false)
+        </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -36,5 +38,6 @@
 
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    @RenderSection("ScriptContent", required: false)
 </body>
 </html>

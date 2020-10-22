@@ -1,4 +1,4 @@
-﻿using BlogPessoal.Web.Models;
+﻿using BlogPessoal.Web.Models.CategoriasDeArtigo;
 using System.Data.Entity.ModelConfiguration;
 
 namespace BlogPessoal.Web.Data.Mapeamento

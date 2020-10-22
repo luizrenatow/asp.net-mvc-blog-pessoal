@@ -1,4 +1,5 @@
 ﻿using BlogPessoal.Web.Models.Autores;
+using BlogPessoal.Web.Models.CategoriasDeArtigo;
 using System;
 using System.ComponentModel.DataAnnotations;
 

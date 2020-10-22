@@ -1,5 +1,5 @@
 ﻿using BlogPessoal.Web.Data.Mapeamento;
-using BlogPessoal.Web.Models;
+using BlogPessoal.Web.Models.CategoriasDeArtigo;
 using System.Data.Entity;
 
 namespace BlogPessoal.Web.Data.Contexto

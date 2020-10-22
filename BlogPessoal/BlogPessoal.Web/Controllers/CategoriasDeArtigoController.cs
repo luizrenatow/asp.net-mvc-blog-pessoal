@@ -1,5 +1,5 @@
 ﻿using BlogPessoal.Web.Data.Contexto;
-using BlogPessoal.Web.Models;
+using BlogPessoal.Web.Models.CategoriasDeArtigo;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
@@ -7,17 +7,16 @@ using System.Web.Mvc;
 
 namespace BlogPessoal.Web.Controllers
 {
-    [Authorize]
     public class CategoriasDeArtigoController : Controller
     {
         private BlogPessoalContexto db = new BlogPessoalContexto();
 
         public ActionResult Index()
         {
-            var lista = db.CategoriasDeArtigo
+            var categorias = db.CategoriasDeArtigo
                 .OrderBy(t => t.Nome)
                 .ToList();
-            return View(lista);
+            return View(categorias);
         }
 
         public ActionResult Create()
