@@ -58,6 +58,25 @@ namespace BlogPessoal.Web.Controllers
                 return RedirectToAction("Index");
             }
             return View(categoria);
-        }        
+        }
+
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            var categoria = db.CategoriasDeArtigo.Find(id);
+            if (categoria == null)
+                return HttpNotFound();
+            return View(categoria);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            var categoria = db.CategoriasDeArtigo.Find(id);
+            db.CategoriasDeArtigo.Remove(categoria);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -120,6 +120,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Artigos\Artigo.cs" />
+    <Compile Include="Models\Autores\Autor.cs" />
     <Compile Include="Models\CategoriasDeArtigo\CategoriaDeArtigo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
