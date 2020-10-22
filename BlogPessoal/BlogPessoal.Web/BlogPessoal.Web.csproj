@@ -145,6 +145,8 @@
     <Content Include="Views\Shared\_LayoutBlog.cshtml" />
     <Content Include="Views\CategoriasDeArtigo\Index.cshtml" />
     <Content Include="Views\CategoriasDeArtigo\Create.cshtml" />
+    <Content Include="Views\CategoriasDeArtigo\Edit.cshtml" />
+    <Content Include="Views\CategoriasDeArtigo\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

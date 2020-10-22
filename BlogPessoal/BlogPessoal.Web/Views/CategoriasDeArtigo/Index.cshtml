@@ -15,17 +15,17 @@
     <tr>
         <th>Nome</th>
         <th>Descrição</th>
-        @*@<th>Opções</th>*@
+        <th>Opções</th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>    
             <td>@item.Nome</td>
-            <td>@Html.DisplayFor(t => item.Descricao)</td>@*
+            <td>@Html.DisplayFor(t => item.Descricao)</td>
             <td>@Html.ActionLink("Editar", "Edit", new { id = item.Id })
                 @Html.ActionLink("Remover", "Delete", new { id = item.Id })
-            </td>*@
+            </td>
         </tr>
     }
 </table>
