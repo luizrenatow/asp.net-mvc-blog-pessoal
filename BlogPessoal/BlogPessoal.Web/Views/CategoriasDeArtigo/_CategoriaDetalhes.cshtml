@@ -1,0 +1,25 @@
+﻿@using BlogPessoal.Web.Models.CategoriasDeArtigo
+@model CategoriaDeArtigo
+<div>
+    <fieldset>
+        <legend>Categoria</legend>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Descricao)
+            </dd>
+        </dl>
+    </fieldset>
+</div>
+

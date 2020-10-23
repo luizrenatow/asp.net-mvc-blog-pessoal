@@ -1,0 +1,12 @@
+﻿@using BlogPessoal.Web.Models.CategoriasDeArtigo
+@model List <CategoriaDeArtigo>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            @item.Nome
+        </li>
+    }
+
+</ul>

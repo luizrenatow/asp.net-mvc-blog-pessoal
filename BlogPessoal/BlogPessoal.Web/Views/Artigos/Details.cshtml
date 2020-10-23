@@ -1,10 +1,12 @@
 ﻿@model BlogPessoal.Web.Models.Artigos.Artigo
 
-@{
-    ViewBag.Title = "Details";
-}
+@{ ViewBag.Title = "Details"; }
 
 <h2>Details</h2>
+
+<div>
+    A hora corrente é: @DateTime.Now.ToString("T")
+</div>
 
 <div>
     <h4>Artigo</h4>
@@ -60,6 +62,18 @@
 
     </dl>
 </div>
+
+@Html.Partial("../CategoriasDeArtigo/_CategoriaDetalhes", Model.CategoriaDeArtigo) 
+
+<hr />
+
+@Html.Partial("~/Views/CategoriasDeArtigo/_CategoriaDetalhes.cshtml", Model.CategoriaDeArtigo)
+
+<hr />
+
+@{ Html.RenderPartial("~/Views/CategoriasDeArtigo/_CategoriaDetalhes.cshtml", Model.CategoriaDeArtigo); }
+
+
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")

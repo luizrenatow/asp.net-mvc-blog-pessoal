@@ -32,6 +32,10 @@
     </div>
 
     <div class="container body-content">
+        <div>
+            @{ Html.RenderAction("CategoriasDeArtigo", "Home"); }
+        </div>
+
         @RenderBody()
         <hr />
         <footer>

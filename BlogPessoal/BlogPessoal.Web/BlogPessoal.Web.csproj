@@ -164,6 +164,8 @@
     <Content Include="Views\Artigos\Edit.cshtml" />
     <Content Include="Views\Artigos\Index.cshtml" />
     <Content Include="Views\CategoriasDeArtigo\Details.cshtml" />
+    <Content Include="Views\Shared\_Categorias.cshtml" />
+    <Content Include="Views\CategoriasDeArtigo\_CategoriaDetalhes.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
