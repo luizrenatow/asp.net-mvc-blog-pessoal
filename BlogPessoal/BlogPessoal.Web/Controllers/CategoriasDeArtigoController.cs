@@ -1,5 +1,6 @@
 ﻿using BlogPessoal.Web.Data.Contexto;
 using BlogPessoal.Web.Models.CategoriasDeArtigo;
+using BlogPessoal.Web.Filtros;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
@@ -33,6 +34,21 @@ namespace BlogPessoal.Web.Controllers
                 db.CategoriasDeArtigo.Add(categoria);
                 db.SaveChanges();
                 return RedirectToAction("Index");
+            }
+            return View(categoria);
+        }
+
+        //[ExibirArtigosActionFilter(CategoriaId = 4)]
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var categoria = db.CategoriasDeArtigo.Find(id);
+            if (categoria == null)
+            {
+                return HttpNotFound();
             }
             return View(categoria);
         }

@@ -113,6 +113,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ArtigosController.cs" />
     <Compile Include="Controllers\AutoresController.cs" />
@@ -122,6 +123,7 @@
     <Compile Include="Data\Mapeamento\ArtigoMap.cs" />
     <Compile Include="Data\Mapeamento\AutorMap.cs" />
     <Compile Include="Data\Mapeamento\CategoriaDeArtigoMap.cs" />
+    <Compile Include="Filtros\ExibirArtigosActionFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -161,6 +163,7 @@
     <Content Include="Views\Artigos\Details.cshtml" />
     <Content Include="Views\Artigos\Edit.cshtml" />
     <Content Include="Views\Artigos\Index.cshtml" />
+    <Content Include="Views\CategoriasDeArtigo\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -7,6 +7,7 @@ using BlogPessoal.Web.Models.Autores;
 
 namespace BlogPessoal.Web.Controllers
 {
+    [Authorize]
     public class AutoresController : Controller
     {
         private BlogPessoalContexto db = new BlogPessoalContexto();
@@ -18,6 +19,7 @@ namespace BlogPessoal.Web.Controllers
         }
 
         // GET: Autores/Details/5
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)

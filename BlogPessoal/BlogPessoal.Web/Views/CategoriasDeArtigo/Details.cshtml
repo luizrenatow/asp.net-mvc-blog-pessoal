@@ -1,0 +1,55 @@
+﻿@using BlogPessoal.Web.Models.CategoriasDeArtigo
+@using BlogPessoal.Web.Models.Artigos
+
+@model CategoriaDeArtigo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<h4>
+    @{
+        List<Artigo> artigos = ViewBag.Artigos;
+
+        if (artigos.Any())
+        {
+            <ul>
+                @foreach (var artigo in artigos)
+                {
+                    <li>
+                        @artigo.Titulo
+                    </li>
+                }
+            </ul>
+        }
+    }
+</h4>
+
+<div>
+    <h4>CategoriaDeArtigo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
